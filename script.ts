@@ -32,6 +32,7 @@ class PDFOCRTool {
     progressText: HTMLElement;
     resultContainer: HTMLElement;
     pagesContainer: HTMLElement;
+    downloadBtn: HTMLElement;
     downloadPdfBtn: HTMLElement;
     downloadTxtBtn: HTMLElement;
     newFileBtn: HTMLElement;
@@ -51,6 +52,7 @@ class PDFOCRTool {
       progressText: document.getElementById('progressText')!,
       resultContainer: document.getElementById('resultContainer')!,
       pagesContainer: document.getElementById('pagesContainer')!,
+      downloadBtn: document.getElementById('downloadBtn')!,
       downloadPdfBtn: document.getElementById('downloadPdfBtn')!,
       downloadTxtBtn: document.getElementById('downloadTxtBtn')!,
       newFileBtn: document.getElementById('newFileBtn')!
@@ -68,6 +70,7 @@ class PDFOCRTool {
     this.elements.fileInput.addEventListener('change', this.handleFileSelect.bind(this));
 
     // Button events
+    this.elements.downloadBtn.addEventListener('click', () => this.downloadTextResults());
     this.elements.downloadPdfBtn.addEventListener('click', () => this.downloadSearchablePDF());
     this.elements.downloadTxtBtn.addEventListener('click', () => this.downloadTextResults());
     this.elements.newFileBtn.addEventListener('click', () => this.reset());
