@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run --unstable --watch main.ts",
+    "start": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run --unstable main.ts"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"]
+  }
+} 

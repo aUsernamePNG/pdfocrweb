@@ -1,0 +1,18 @@
+# Deno specific
+.deno/
+*.lock
+deno.lock
+
+# Environment
+.env
+.env.local
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db 

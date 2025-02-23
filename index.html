@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF OCR Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- PDF.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+    <!-- Tesseract.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.5/dist/tesseract.min.js"></script>
+    <!-- PDF-lib for creating searchable PDFs -->
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PDF OCR Tool</h1>
+            <p>Drop your PDF or click to upload</p>
+        </header>
+
+        <div id="dropZone" class="drop-zone">
+            <input type="file" id="fileInput" accept=".pdf" hidden>
+            <div class="drop-zone-content">
+                <svg viewBox="0 0 24 24" width="64" height="64">
+                    <path fill="currentColor" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+                </svg>
+                <p>Drag & Drop PDF here or click to select</p>
+            </div>
+        </div>
+
+        <div id="progressContainer" class="progress-container" hidden>
+            <div class="progress-bar">
+                <div id="progressBar" class="progress"></div>
+            </div>
+            <p id="progressText">Processing page 1 of 1...</p>
+        </div>
+
+        <div id="resultContainer" class="result-container" hidden>
+            <div class="toolbar">
+                <button id="downloadPdfBtn" class="btn">Download Searchable PDF</button>
+                <button id="downloadTxtBtn" class="btn">Download Text</button>
+                <button id="newFileBtn" class="btn">Process New File</button>
+            </div>
+            <div id="pagesContainer" class="pages-container"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
