@@ -128,4 +128,21 @@ header {
     .page-wrapper {
         grid-template-columns: 1fr;
     }
+}
+
+.attribution {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.attribution a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
 } 
